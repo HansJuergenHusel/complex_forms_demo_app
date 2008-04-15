@@ -1,0 +1,11 @@
+<div class="assignment"> 
+<% new_or_existing = assignment.new_record? ? 'new' : 'existing' %> 
+<% prefix = "project[#{new_or_existing}_assignment_attributes][]" %> 
+<% fields_for prefix, assignment do |assignment_form| -%> 
+<p>
+  Employee: <%= assignment_form.collection_select :employee_id, Employee.find(:all), :id, :name %>
+  Title: <%= assignment_form.text_field :title %> 
+  <%= link_to_function "remove", "$(this).up('.assignment').remove()" %> 
+</p>
+<% end -%> 
+</div> 

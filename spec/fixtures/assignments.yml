@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  employee_id: 1
+  project_id: 1
+  title: MyString
+
+two:
+  employee_id: 1
+  project_id: 1
+  title: MyString

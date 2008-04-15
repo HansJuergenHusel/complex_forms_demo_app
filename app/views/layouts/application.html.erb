@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Changes Test</title>
+    <%= javascript_include_tag :defaults %> 
+    <style type="text/css" media="screen">
+      td{
+        vertical-align:top;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="border:0;width:100%;">
+      <tr>
+        <td style="width:200px;">
+          <ul>
+            <%- [Project, Employee, Category, Task, Assignment].each do |model| -%>
+            <li><%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %></li>
+            <%- end -%>
+          </ul>
+        </td>
+        <td>
+          <%= yield %>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
