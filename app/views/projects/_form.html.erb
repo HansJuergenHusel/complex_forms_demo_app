@@ -28,7 +28,21 @@
 <fieldset>
   <legend>Categories</legend>
   <div id="categories">
-    <%= render :partial => 'category', :collection => Category.find(:all), :locals => {:checked => @project.assignments} %>
+
+    <%- for category in Category.find(:all) -%>
+    <div class="categorization">
+    <% categorization = @project.categorizations.select{|c| c.category == category}.first || Categorization.new %>
+    <% new_or_existing = categorization.new_record? ? 'new' : 'existing' %> 
+    <% prefix = "project[#{new_or_existing}_categorization_attributes][]" %> 
+    <% fields_for prefix, category do |category_form| -%> 
+    <p> 
+      <%= category_form.check_box :category_id, {:checked => @project.categorizations.include?(categorization)}, category.id %> 
+      <label for="project_category_attributes_<%=  category.id  %>_id"><%= category.name %></label>
+    </p>
+    <% end -%> 
+    </div>
+    <% end -%> 
+
   </div> 
 </fieldset>
 

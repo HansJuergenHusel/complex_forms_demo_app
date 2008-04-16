@@ -47,25 +47,29 @@ class Project < ActiveRecord::Base
     end 
   end
 
-  def new_categorization_attributes=(categorization_attributes) 
+  # << creates the join row
+  # -= sets project_id to null
+  # categories.delete deletes the row
+  # categorizations.delete sets project_id to null
+  # categorizations.destroy deletes the row
+
+  def new_categorization_attributes=(categorization_attributes)
     return if categorization_attributes.nil?
-    categorization_attributes.each do |attributes| 
-      categorizations.build(attributes) 
+    categorization_attributes.each do |id, attributes| 
+      categorizations.build(attributes) unless attributes["category_id"] == "0"
     end 
   end 
 
   def existing_categorization_attributes=(categorization_attributes) 
     return if categorization_attributes.nil?
     categorizations.reject(&:new_record?).each do |categorization| 
-      attributes = categorization_attributes[categorization.id.to_s] 
+      attributes = categorization_attributes[categorization.category_id.to_s] 
       if attributes 
         categorization.attributes = attributes 
-      else 
-        categorizations.delete(categorization) 
       end 
     end 
   end
-  
+
   private
 
   def save_tasks 
@@ -80,9 +84,13 @@ class Project < ActiveRecord::Base
     end 
   end 
 
-  def save_categorizations 
-    categorizations.each do |categorization| 
-      categorization.save
+  def save_categorizations
+    categorizations.each do |categorization|
+      if categorization.category_id == 0
+        categorization.destroy
+      else
+        categorization.save
+      end
     end 
   end 
 
