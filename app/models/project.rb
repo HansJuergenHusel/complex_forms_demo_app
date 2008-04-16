@@ -13,12 +13,12 @@ class Project < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, :through => :categorizations
 
+  validates_presence_of :name
+  validates_associated :tasks, :assignments
+
   after_update :save_tasks
   after_update :save_assignments
   after_update :save_categorizations
-
-  validates_presence_of :name
-  validates_associated :tasks, :assignments
   
   def new_task_attributes=(task_attributes)
     task_attributes.each do |id,attributes|

@@ -1,12 +1,11 @@
 <h2>The Setup</h2>
 
-<p>To get this app to run on your machine, run</p>
+<p>To get this app to run on your machine edit your <tt>database.yml</tt> file then run:</p>
 
 <pre>
   rake db:create
   rake db:schema:load
   rake db:dataset:load_fixtures DATASET=nasa
-  mongrel_rails start -d
 </pre>
 
 <h2>The Goal</h2>
@@ -21,7 +20,7 @@
   <li>has_many :through (with checkboxes to select the associated models)</li>
 </ul>
 
-<h2>Requirements</h2>
+<h2>Technical Requirements</h2>
 
 <p>
   A form that manages a model and its related model must:
@@ -51,6 +50,75 @@
   <li>Work the same every time a user clicks refresh or submits</li>
 </ul>
 
+<h2>Domain Description</h2>
+
+<p><strong>Project</strong> is the main object here, and is defined as:</p>
+
+<pre>
+  class Project &lt; ActiveRecord::Base
+    has_many :tasks
+    has_many :assignments
+    has_many :employees, :through =&gt; :assignments
+    has_many :categorizations
+    has_many :categories, :through =&gt; :categorizations
+
+    validates_presence_of :name
+    validates_associated :tasks, :assignments
+
+    after_update :save_tasks
+    after_update :save_assignments
+    after_update :save_categorizations
+  end
+</pre>
+
+<p><strong>Task</strong> belongs to <strong>Project</strong> and requires a name:</p>
+
+<pre>
+  class Task &lt; ActiveRecord::Base
+    belongs_to :project
+    validates_presence_of :name
+  end
+</pre>
+
+<p><strong>Employee</strong> is joined to <strong>Project</strong> through an <strong>Assignment</strong> and requires both an employee and a title:</p>
+
+<pre>
+  class Employee &lt; ActiveRecord::Base
+    has_many :assignments
+    has_many :projects, :through => :assignments
+  end
+</pre>
+
+<pre>
+  class Assignment &lt; ActiveRecord::Base
+    belongs_to :project
+    belongs_to :employee
+    validates_presence_of :title
+    validates_presence_of :employee_id
+  end
+</pre>
+
+<p>The project-employee-assignment part of the domain requires additional fields on the join table.</p>
+
+<p><strong>Category</strong> is joined to <strong>Project</strong> through a <strong>Categorization</strong>:</p>
+
+<pre>
+  class Category &lt; ActiveRecord::Base
+    has_many :categorizations
+    has_many :projects, :through => :categorizations
+    validates_presence_of :name
+  end
+</pre>
+
+<pre>
+  class Categorization &lt; ActiveRecord::Base
+    belongs_to :project
+    belongs_to :category
+  end
+</pre>
+
+<p>The project-categorization-category part of the domain is very similar to a <tt>has_and_belongs_to_many</tt> relationship.</p>
+
 <h3>Handling validation</h3>
 
 <p>Instead of using the rails default <tt>error_messages_for</tt> helper, just use a partial.</p>
@@ -67,8 +135,50 @@
 <p>This requires a complex interaction between the partial and the javascript code.  The necessary parts are spread across multiple files:</p>
 
 <ul>
-  <li>public/javascripts/application.js contains a generic class that you can use for any subform, and add multiple subforms to a page</li>
-  <li>Each child form's partial must instantiate the javascript - I use a content_for block and inject that code into the head of the document</li>
+  <li>
+    public/javascripts/application.js contains a generic class that you can use for any subform, and add multiple subforms to a page:
+    <pre>
+  var Subform = Class.create({
+    lineIndex: 1,
+    parentElement: "",
+
+    // rawHTML contains the html to add using the "add" link
+    // lineIndex should be the length of the original array
+    // parentElement is the id of the div that the subforms attach to
+    initialize: function(rawHTML, lineIndex, parentElement) {
+      this.rawHTML        = rawHTML;
+      this.lineIndex      = lineIndex;
+      this.parentElement  = parentElement;
+    },
+
+    // parses the rawHTML and replaces all instances of the word
+    // INDEX with the line index
+    // So the HTML on that rails outputs will be INDEX, but when this
+    // is added to the dom it has the correct id
+    parsedHTML: function() {
+      return this.rawHTML.replace(/INDEX/g, this.lineIndex++);
+    },
+
+    // handles the inserting of the child form
+    add: function() {
+      new Insertion.Bottom($(this.parentElement), this.parsedHTML());
+    }
+  });
+    </pre>
+  </li>
+  <li>
+    Each child form's partial must instantiate the javascript - I use a content_for block and inject that code into the head of the document
+    <pre>
+      &lt;%- content_for :head do -%&gt;
+        &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+         //&lt;![CDATA[
+           taskForm = new Subform(&#x27;&lt;%= escape_javascript(render(:partial =&gt; &quot;task&quot;, :object =&gt; Task.new, :locals =&gt; {:index =&gt; &quot;INDEX&quot;})) %&gt;&#x27;,&lt;%= @project.tasks.length %&gt;,&#x27;tasks&#x27;);
+           assignmentForm = new Subform(&#x27;&lt;%= escape_javascript(render(:partial =&gt; &quot;assignment&quot;, :object =&gt; Assignment.new, :locals =&gt; {:index =&gt; &quot;INDEX&quot;})) %&gt;&#x27;,&lt;%= @project.assignments.length %&gt;,&#x27;assignments&#x27;);
+         //]]&gt;
+        &lt;/script&gt;
+      &lt;%- end -%&gt;
+    </pre>
+  </li>
   <li>If you are using content_for like I am, then the app/views/application.html.erb file must have a corresponding yield statement</li>
 </ul>
 

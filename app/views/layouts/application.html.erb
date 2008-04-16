@@ -10,7 +10,7 @@
   <%= yield :head %>
 </head>
 <body>
-  <div id="doc3" class="yui-t1">
+  <div id="doc3" class="yui-t2">
     <div id="hd">
       <h1>Complex Form Demo App</h1>
     </div>
@@ -24,20 +24,22 @@
         </div>
       </div>
       <div class="yui-b">
+        <strong>Navigation</strong>
         <ul>
           <li><%= link_to "Home", "/" %></li>
         </ul>
+        <strong>Primary Entities</strong>
         <ul>
-          <%- [Project].each do |model| -%>
-          <li><%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %></li>
+          <%- [Project, Employee, Category].each do |model| -%>
+          <li>
+            <%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %>
+            <ul>
+              <li><%= link_to "New #{model.name}", eval("new_#{model.name.downcase}_url")  %></li>
+            </ul>
+          </li>
           <%- end -%>
-          <li><%= link_to "New Project", new_project_url  %></li>
         </ul>
-        <ul>
-          <%- [Employee, Category].each do |model| -%>
-          <li><%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %></li>
-          <%- end -%>
-        </ul>
+        <strong>Child Entities</strong>
         <ul>
           <%- [Task, Assignment, Categorization].each do |model| -%>
           <li><%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %></li>

@@ -79,3 +79,11 @@ legend{
 #ft p{
   padding-left:170px;
 }
+#flash{
+  padding:.5em;
+  background:#e5e5e5;
+  font-weight:bold;
+}
+pre{
+  overflow:auto;
+}

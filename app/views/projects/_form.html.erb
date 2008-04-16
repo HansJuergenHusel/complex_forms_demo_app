@@ -52,8 +52,9 @@
       </p>
     </div>
     <div class="yui-u">
+      <p>Add several assignments and leave them blank, then click submit to see validation in action.</p>
       <p>Notice how clicking the label properly highlights the correct radio button.</p>
-      <p>New assignments have no person there intentionally, so that we can test what happens when it is sent back with nothing.</p>
+      <p>Click <%= link_to_function "Show/Hide Params", visual_effect(:toggle_blind, :params, :duration => "0.1") %> to see the params.  If you haven't selected anything notice that it's absent from the params, but it doesn't matter because the validations pick it up.</p>
     </div>
   </div>
 

@@ -3608,3 +3608,942 @@ Rendered projects/_categorization (0.00034)
 Rendered projects/_categorization (0.00031)
 Rendered projects/_form (0.04277)
 Completed in 0.08422 (11 reqs/sec) | Rendering: 0.03329 (39%) | DB: 0.03415 (40%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2008-04-16 06:43:02) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"", "new_task_attributes"=>{"0"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "1"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "2"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"0"}}, "new_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"0"}, "3"=>{"category_id"=>"0"}}, "new_assignment_attributes"=>{"0"=>{"title"=>""}, "1"=>{"title"=>""}, "2"=>{"title"=>""}, "3"=>{"title"=>""}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"create", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.002213)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mTask Columns (0.001353)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mCategorization Columns (0.001127)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mAssignment Columns (0.005538)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mSQL (0.000466)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00066)
+  [4;35;1mEmployee Load (0.000768)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.001170)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00871)
+Rendered projects/_error_messages (0.00081)
+Rendered projects/_task (0.00058)
+Rendered projects/_task (0.00054)
+Rendered projects/_task (0.00063)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00083)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00080)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00151)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00080)
+  [4;35;1mCategory Load (0.000244)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategory Columns (0.001000)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.001421)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered projects/_categorization (0.00078)
+Rendered projects/_categorization (0.00037)
+Rendered projects/_categorization (0.00031)
+Rendered projects/_form (0.03436)
+Completed in 0.12695 (7 reqs/sec) | Rendering: 0.03201 (25%) | DB: 0.01546 (12%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2008-04-16 06:43:06) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"", "new_task_attributes"=>{"0"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "1"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "2"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"0"}}, "new_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"2"}, "3"=>{"category_id"=>"0"}}, "new_assignment_attributes"=>{"0"=>{"title"=>""}, "1"=>{"title"=>""}, "2"=>{"title"=>""}, "3"=>{"title"=>""}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"create", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.003728)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.002166)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mCategorization Columns (0.007219)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mAssignment Columns (0.002275)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000065)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00063)
+  [4;36;1mEmployee Load (0.000235)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001237)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00883)
+Rendered projects/_error_messages (0.00075)
+Rendered projects/_task (0.00056)
+Rendered projects/_task (0.00052)
+Rendered projects/_task (0.00052)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00100)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00083)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00079)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00188)
+  [4;36;1mCategory Load (0.000302)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (0.000989)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.001968)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000316)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00080)
+Rendered projects/_categorization (0.00037)
+Rendered projects/_categorization (0.00033)
+Rendered projects/_form (0.09134)
+Completed in 0.12861 (7 reqs/sec) | Rendering: 0.08859 (68%) | DB: 0.02065 (16%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2008-04-16 06:43:12) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"", "new_task_attributes"=>{"0"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "1"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "2"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"0"}}, "new_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"2"}, "3"=>{"category_id"=>"0"}}, "new_assignment_attributes"=>{"0"=>{"title"=>""}, "1"=>{"title"=>""}, "2"=>{"title"=>""}, "3"=>{"title"=>"", "employee_id"=>"2"}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"create", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001096)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.002163)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mCategorization Columns (0.007914)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mAssignment Columns (0.008201)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (0.001763)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000072)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00063)
+  [4;36;1mEmployee Load (0.000216)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001029)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00768)
+Rendered projects/_error_messages (0.00075)
+Rendered projects/_task (0.00057)
+Rendered projects/_task (0.00054)
+Rendered projects/_task (0.00053)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00082)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00078)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00076)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00073)
+  [4;36;1mCategory Load (0.000787)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (0.000872)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.001915)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000175)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00081)
+Rendered projects/_categorization (0.00037)
+Rendered projects/_categorization (0.00031)
+Rendered projects/_form (0.03248)
+Completed in 0.07529 (13 reqs/sec) | Rendering: 0.02963 (39%) | DB: 0.02620 (34%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2008-04-16 06:43:17) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"", "new_task_attributes"=>{"0"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "1"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "2"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"0"}}, "new_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"2"}, "3"=>{"category_id"=>"0"}}, "new_assignment_attributes"=>{"0"=>{"title"=>""}, "1"=>{"title"=>""}, "2"=>{"title"=>""}, "3"=>{"title"=>"Test", "employee_id"=>"2"}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"create", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001266)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.016176)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mCategorization Columns (0.015804)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mAssignment Columns (0.002583)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (0.000501)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000066)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00066)
+  [4;36;1mEmployee Load (0.000301)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001083)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00813)
+Rendered projects/_error_messages (0.00071)
+Rendered projects/_task (0.00056)
+Rendered projects/_task (0.00054)
+Rendered projects/_task (0.00052)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00083)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00077)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00076)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00067)
+  [4;36;1mCategory Load (0.000706)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (0.000846)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.000739)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000141)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00077)
+Rendered projects/_categorization (0.00042)
+Rendered projects/_categorization (0.00030)
+Rendered projects/_form (0.03140)
+Completed in 0.14877 (6 reqs/sec) | Rendering: 0.02974 (19%) | DB: 0.04021 (27%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2008-04-16 06:43:27) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"", "new_task_attributes"=>{"0"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "1"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"1"}, "2"=>{"name"=>"", "marked_for_deletion"=>"false", "complete"=>"0"}}, "new_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"2"}, "3"=>{"category_id"=>"0"}}, "new_assignment_attributes"=>{"0"=>{"title"=>""}, "1"=>{"title"=>""}, "2"=>{"title"=>""}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"create", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001067)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.011996)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mCategorization Columns (0.002885)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mAssignment Columns (0.008053)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (0.003002)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000065)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00063)
+  [4;36;1mEmployee Load (0.000234)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001015)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00759)
+Rendered projects/_error_messages (0.00075)
+Rendered projects/_task (0.00174)
+Rendered projects/_task (0.00056)
+Rendered projects/_task (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00088)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00079)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00077)
+  [4;35;1mCategory Load (0.000331)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategory Columns (0.000993)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.010425)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000298)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00098)
+Rendered projects/_categorization (0.00039)
+Rendered projects/_categorization (0.00033)
+Rendered projects/_form (0.09564)
+Completed in 0.14456 (6 reqs/sec) | Rendering: 0.08456 (58%) | DB: 0.04036 (27%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:46:08) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.001456)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mTask Columns (0.013579)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mAssignment Columns (0.015136)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00176)
+  [4;36;1mEmployee Load (0.000415)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001626)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00941)
+Rendered projects/_error_messages (0.00018)
+Rendered projects/_task (0.00053)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00071)
+  [4;35;1mCategory Load (0.000654)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategorization Columns (0.008706)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mCategory Columns (0.002590)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.00381)
+Rendered projects/_categorization (0.00034)
+Rendered projects/_categorization (0.00037)
+Rendered projects/_form (0.04213)
+Completed in 0.08953 (11 reqs/sec) | Rendering: 0.03279 (36%) | DB: 0.04416 (49%) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:46:34) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001128)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.015687)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mAssignment Columns (0.000924)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00125)
+  [4;35;1mEmployee Load (0.000305)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.005651)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.06749)
+Rendered projects/_error_messages (0.00019)
+Rendered projects/_task (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00074)
+  [4;36;1mCategory Load (0.000694)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategorization Columns (0.001251)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mCategory Columns (0.012245)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.01349)
+Rendered projects/_categorization (0.00036)
+Rendered projects/_categorization (0.00032)
+Rendered projects/_form (0.09799)
+Completed in 0.13527 (7 reqs/sec) | Rendering: 0.08178 (60%) | DB: 0.03788 (28%) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:47:55) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.001488)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mTask Columns (0.013042)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mAssignment Columns (0.006500)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00126)
+  [4;36;1mEmployee Load (0.000760)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.005024)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.01291)
+Rendered projects/_error_messages (0.00018)
+Rendered projects/_task (0.00063)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00072)
+  [4;35;1mCategory Load (0.000242)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategorization Columns (0.002041)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mCategory Columns (0.001289)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.00244)
+Rendered projects/_categorization (0.00032)
+Rendered projects/_categorization (0.00029)
+Rendered projects/_form (0.03203)
+Completed in 0.06848 (14 reqs/sec) | Rendering: 0.02678 (39%) | DB: 0.03039 (44%) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:48:06) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001390)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.000990)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mAssignment Columns (0.001139)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00133)
+  [4;35;1mEmployee Load (0.000377)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.004254)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.01240)
+Rendered projects/_error_messages (0.00018)
+Rendered projects/_task (0.00054)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00087)
+  [4;36;1mCategory Load (0.000709)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategorization Columns (0.002565)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mCategory Columns (0.002645)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.00399)
+Rendered projects/_categorization (0.00035)
+Rendered projects/_categorization (0.00031)
+Rendered projects/_form (0.03485)
+Completed in 0.10983 (9 reqs/sec) | Rendering: 0.02851 (25%) | DB: 0.01407 (12%) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:49:12) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.001119)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mTask Columns (0.002161)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mAssignment Columns (0.001344)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00146)
+  [4;36;1mEmployee Load (0.003713)[0m   [0;1mSELECT * FROM `employees` [0m
+  [4;35;1mEmployee Columns (0.001502)[0m   [0mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.01273)
+Rendered projects/_error_messages (0.00018)
+Rendered projects/_task (0.00053)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00070)
+  [4;35;1mCategory Load (0.000848)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategorization Columns (0.002113)[0m   [0;1mSHOW FIELDS FROM `categorizations`[0m
+  [4;35;1mCategory Columns (0.001226)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.00239)
+Rendered projects/_categorization (0.00033)
+Rendered projects/_categorization (0.00030)
+Rendered projects/_form (0.03265)
+Completed in 0.05572 (17 reqs/sec) | Rendering: 0.02770 (49%) | DB: 0.01403 (25%) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 06:49:34) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001323)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mTask Columns (0.009114)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mAssignment Columns (0.012630)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (0.00130)
+  [4;35;1mEmployee Load (0.000318)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.000893)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.00888)
+Rendered projects/_error_messages (0.00020)
+Rendered projects/_task (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00080)
+  [4;36;1mCategory Load (0.000706)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategorization Columns (0.000929)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mCategory Columns (0.008384)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered projects/_categorization (0.00956)
+Rendered projects/_categorization (0.00033)
+Rendered projects/_categorization (0.00031)
+Rendered projects/_form (0.03482)
+Completed in 0.07456 (13 reqs/sec) | Rendering: 0.02760 (37%) | DB: 0.03430 (45%) | 200 OK [http://localhost/projects/new]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:49:43) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.02679 (37 reqs/sec) | Rendering: 0.02475 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.008964)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.001451)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000379)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateCategorizations (6)
+  [4;35;1mSQL (0.004252)[0m   [0mDROP TABLE `categorizations`[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateCategories (5)
+  [4;36;1mSQL (0.012690)[0m   [0;1mDROP TABLE `categories`[0m
+  [4;35;1mSQL (0.000200)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateAssignments (4)
+  [4;35;1mSQL (0.003683)[0m   [0mDROP TABLE `assignments`[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000112)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateEmployees (3)
+  [4;36;1mSQL (0.004404)[0m   [0;1mDROP TABLE `employees`[0m
+  [4;35;1mSQL (0.000189)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTasks (2)
+  [4;35;1mSQL (0.006266)[0m   [0mDROP TABLE `tasks`[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000205)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateProjects (1)
+  [4;36;1mSQL (0.002032)[0m   [0;1mDROP TABLE `projects`[0m
+  [4;35;1mSQL (0.000209)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000317)[0m   [0mSHOW TABLES[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:50:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.07995 (12 reqs/sec) | Rendering: 0.07787 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:52:18) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03120 (32 reqs/sec) | Rendering: 0.02912 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:52:26) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.08912 (11 reqs/sec) | Rendering: 0.08689 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:53:30) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000353)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000231)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007230)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.001753)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001130)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000516)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.004415)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.002510)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000107)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.74149 (0 reqs/sec) | Rendering: 0.03425 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 06:53:58) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001272)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001244)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000431)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.79497 (0 reqs/sec) | Rendering: 0.03363 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.000218)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002248)[0m   [0;1mDROP DATABASE IF EXISTS `changes_development`[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:02:04) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000187)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000077)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000344)[0m   [0;1mCREATE DATABASE `changes_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.001260)[0m   [0;1mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000361)[0m   [0mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001213)[0m   [0;1mSHOW FIELDS FROM `schema_info`[0m
+  [4;35;1mSQL (0.000172)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.002017)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.044243)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.001372)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.005939)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.007515)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.80480 (0 reqs/sec) | Rendering: 0.03656 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:02:40) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000216)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001261)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001171)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.001008)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.001977)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.93332 (0 reqs/sec) | Rendering: 0.03829 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:02:53) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.10158 (9 reqs/sec) | Rendering: 0.09734 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:02:57) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03231 (30 reqs/sec) | Rendering: 0.03037 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:03:00) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000216)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000282)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001315)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.005880)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.003287)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.007156)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000301)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 6.91447 (0 reqs/sec) | Rendering: 0.03231 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:05:48) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03085 (32 reqs/sec) | Rendering: 0.02889 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:10:53) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03591 (27 reqs/sec) | Rendering: 0.03400 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:11:21) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.08260 (12 reqs/sec) | Rendering: 0.02801 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:12:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.02919 (34 reqs/sec) | Rendering: 0.02730 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:15:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.08147 (12 reqs/sec) | Rendering: 0.07949 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2008-04-16 07:15:08) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"new", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.000000)[0m   [0mMysql::Error: Table 'changes_development.projects' doesn't exist: SHOW FIELDS FROM `projects`[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'changes_development.projects' doesn't exist: SHOW FIELDS FROM `projects`):
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:411:in `columns'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    /app/controllers/projects_controller.rb:27:in `new'
+    /app/controllers/projects_controller.rb:27:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:155:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:15:13) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.000212)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000075)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000077)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001009)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000517)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001285)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.59832 (0 reqs/sec) | Rendering: 0.03111 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2008-04-16 07:15:22) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;36;1mProject Load (0.000000)[0m   [0;1mMysql::Error: Table 'changes_development.projects' doesn't exist: SELECT * FROM `projects` [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'changes_development.projects' doesn't exist: SELECT * FROM `projects`   ):
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:481:in `select'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:532:in `find_by_sql'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1233:in `find_every'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:503:in `find'
+    /app/controllers/projects_controller.rb:5:in `index'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:155:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:16:36) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Create and populate database", "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "action"=>"index", "controller"=>"pages"}
+  [4;36;1mSQL (0.006434)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000206)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001326)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000077)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000999)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.000521)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000107)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4.58997 (0 reqs/sec) | Rendering: 0.03230 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2008-04-16 07:16:43) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiNERhdGFiYXNlIHdhcyBjcmVhdGVkIGFuZCBwb3B1%0AbGF0ZWQgc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsGVDoMY3NyZl9pZCIlMDgy%0AMzQ2ZmQ1ZTY0Y2JlMzE0ZjM1OTlmNWUwZTczZDg%3D--148ecc7cffb5c38641282ad848b51a0c17c2aa79
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;35;1mProject Load (0.000000)[0m   [0mMysql::Error: Table 'changes_development.projects' doesn't exist: SELECT * FROM `projects` [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'changes_development.projects' doesn't exist: SELECT * FROM `projects`   ):
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:481:in `select'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:532:in `find_by_sql'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1233:in `find_every'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:503:in `find'
+    /app/controllers/projects_controller.rb:5:in `index'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:155:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:154:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel.rb:264:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/../lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:18:45) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03249 (30 reqs/sec) | Rendering: 0.03037 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:19:48) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.08863 (11 reqs/sec) | Rendering: 0.08653 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:20:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03325 (30 reqs/sec) | Rendering: 0.03116 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:20:17) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03232 (30 reqs/sec) | Rendering: 0.03028 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:20:59) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mTask Columns (0.000000)[0m   [0;1mMysql::Error: Table 'changes_development.tasks' doesn't exist: SHOW FIELDS FROM `tasks`[0m
+
+
+ActionView::TemplateError (Mysql::Error: Table 'changes_development.tasks' doesn't exist: SHOW FIELDS FROM `tasks`) on line #175 of pages/index.html.erb:
+172:       <%- content_for :head do -%>
+173:         <script type="text/javascript" charset="utf-8">
+174:          //<![CDATA[
+175:            taskForm = new Subform('<%= escape_javascript(render(:partial => "task", :object => Task.new, :locals => {:index => "INDEX"})) %>',<%= @project.tasks.length %>,'tasks');
+176:            assignmentForm = new Subform('<%= escape_javascript(render(:partial => "assignment", :object => Assignment.new, :locals => {:index => "INDEX"})) %>',<%= @project.assignments.length %>,'assignments');
+177:          //]]>
+178:         </script>
+
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:411:in `columns'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    app/views/pages/index.html.erb:175:in `new'
+    app/views/pages/index.html.erb:175:in `_run_erb_47app47views47pages47index46html46erb'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/capture_helper.rb:142:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/capture_helper.rb:142:in `capture_erb_with_buffer'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/capture_helper.rb:44:in `capture'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/capture_helper.rb:126:in `content_for'
+    app/views/pages/index.html.erb:172:in `_run_erb_47app47views47pages47index46html46erb'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1164:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:21:29) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.09627 (10 reqs/sec) | Rendering: 0.09417 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 07:21:54) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.02537 (39 reqs/sec) | Rendering: 0.02257 (88%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]

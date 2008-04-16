@@ -240,3 +240,128 @@
 ** Rails signals registered.  HUP => reload (without restart).  It might not work well.
 ** Mongrel 1.1.1 available at 0.0.0.0:3000
 ** Writing PID file to log/mongrel.pid
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0215s
+-- columns("schema_info")
+   -> 0.0014s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0163s
+-- columns("schema_info")
+   -> 0.0047s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0108s
+-- columns("schema_info")
+   -> 0.0015s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0114s
+-- columns("schema_info")
+   -> 0.0015s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0204s
+-- columns("schema_info")
+   -> 0.0015s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0251s
+-- columns("schema_info")
+   -> 0.0445s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0106s
+-- columns("schema_info")
+   -> 0.0015s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0129s
+-- columns("schema_info")
+   -> 0.0014s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0134s
+-- columns("schema_info")
+   -> 0.0016s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0312s
+-- columns("schema_info")
+   -> 0.0076s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0153s
+-- columns("schema_info")
+   -> 0.0013s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0118s
+-- columns("schema_info")
+   -> 0.0015s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
+(in /Users/jeff/Sites/youthline/lab/changes)
+"changes_development already exists"
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0108s
+-- columns("schema_info")
+   -> 0.0016s
+rake aborted!
+Mysql::Error: Table 'changes_development.assignments' doesn't exist: DELETE FROM `assignments`
+
+(See full trace by running task with --trace)
+(in /Users/jeff/Sites/youthline/lab/changes)
+-- initialize_schema_information()
+   -> 0.0105s
+-- columns("schema_info")
+   -> 0.0013s
+Loading dataset to development
+Loading fixture db/dataset/nasa/assignments.yml
