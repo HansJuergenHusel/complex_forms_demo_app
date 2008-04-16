@@ -7237,3 +7237,141 @@ Processing PagesController#index (for 127.0.0.1 at 2008-04-16 08:15:03) [GET]
 Rendering template within layouts/application
 Rendering pages/index
 Completed in 0.03539 (28 reqs/sec) | Rendering: 0.03303 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2008-04-16 08:34:07) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"projects"}
+  [4;36;1mProject Load (0.000398)[0m   [0;1mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+  [4;35;1mProject Columns (0.001007)[0m   [0mSHOW FIELDS FROM `projects`[0m
+Completed in 0.08020 (12 reqs/sec) | Rendering: 0.07231 (90%) | DB: 0.00141 (1%) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2008-04-16 08:34:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001287)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.000412)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;36;1mTask Columns (0.001710)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Rendered projects/_task (0.00237)
+  [4;35;1mTask Load (0.007562)[0m   [0mSELECT * FROM `tasks` WHERE (tasks.project_id = 1) [0m
+  [4;36;1mAssignment Columns (0.003099)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mEmployee Load (0.001432)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.000858)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.01021)
+  [4;35;1mAssignment Load (0.000829)[0m   [0mSELECT * FROM `assignments` WHERE (assignments.project_id = 1) [0m
+Rendered projects/_error_messages (0.00137)
+Rendered projects/_task (0.00055)
+Rendered projects/_task (0.00074)
+Rendered projects/_task (0.00051)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00075)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00068)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00066)
+  [4;35;1mCategory Load (0.000223)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategorization Load (0.000180)[0m   [0;1mSELECT * FROM `categorizations` WHERE (categorizations.project_id = 1) [0m
+  [4;35;1mCategorization Columns (0.001418)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mCategory Columns (0.000855)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.001363)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000125)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00149)
+Rendered projects/_categorization (0.00044)
+Rendered projects/_categorization (0.00031)
+Rendered projects/_form (0.06525)
+Completed in 0.07668 (13 reqs/sec) | Rendering: 0.04830 (62%) | DB: 0.02135 (27%) | 200 OK [http://localhost/projects/1/edit]
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2008-04-16 08:34:21) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.002449)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.000599)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;36;1mTask Columns (0.011445)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Rendered projects/_task (0.00223)
+  [4;35;1mTask Load (0.005821)[0m   [0mSELECT * FROM `tasks` WHERE (tasks.project_id = 1) [0m
+  [4;36;1mAssignment Columns (0.002800)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mEmployee Load (0.001611)[0m   [0mSELECT * FROM `employees` [0m
+  [4;36;1mEmployee Columns (0.001231)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+Rendered projects/_assignment (0.06333)
+  [4;35;1mAssignment Load (0.009442)[0m   [0mSELECT * FROM `assignments` WHERE (assignments.project_id = 1) [0m
+Rendered projects/_error_messages (0.00018)
+Rendered projects/_task (0.00056)
+Rendered projects/_task (0.00052)
+Rendered projects/_task (0.00051)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00074)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00069)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `employees` [0m
+Rendered projects/_assignment (0.00069)
+  [4;35;1mCategory Load (0.000507)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategorization Load (0.000187)[0m   [0;1mSELECT * FROM `categorizations` WHERE (categorizations.project_id = 1) [0m
+  [4;35;1mCategorization Columns (0.004518)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mCategory Columns (0.009616)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.006017)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.002810)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendered projects/_categorization (0.00079)
+Rendered projects/_categorization (0.00043)
+Rendered projects/_categorization (0.00032)
+Rendered projects/_form (0.15296)
+Completed in 0.16407 (6 reqs/sec) | Rendering: 0.09912 (60%) | DB: 0.05905 (35%) | 200 OK [http://localhost/projects/1/edit]
+
+
+Processing ProjectsController#update (for 127.0.0.1 at 2008-04-16 08:34:30) [PUT]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"commit"=>"Submit", "project"=>{"name"=>"Apollo 11", "existing_task_attributes"=>{"6"=>{"name"=>"Come Back Safely", "marked_for_deletion"=>"false", "complete"=>"0"}, "4"=>{"name"=>"Take Off", "marked_for_deletion"=>"false", "complete"=>"1"}}, "existing_categorization_attributes"=>{"1"=>{"category_id"=>"1"}, "2"=>{"category_id"=>"2"}}, "new_categorization_attributes"=>{"3"=>{"category_id"=>"0"}}, "existing_assignment_attributes"=>{"1"=>{"title"=>"Commander", "employee_id"=>"1"}, "2"=>{"title"=>"Command Module Pilot", "employee_id"=>"2"}, "3"=>{"title"=>"Lunar Module Pilot", "employee_id"=>"3"}}}, "authenticity_token"=>"82922fd9daedcd785c27f7ad823b55df7e83a509", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"projects"}
+  [4;36;1mProject Columns (0.001177)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.014208)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+  [4;36;1mTask Load (0.000210)[0m   [0;1mSELECT * FROM `tasks` WHERE (tasks.project_id = 1) [0m
+  [4;35;1mTask Columns (0.001972)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mCategorization Load (0.000686)[0m   [0;1mSELECT * FROM `categorizations` WHERE (categorizations.project_id = 1) [0m
+  [4;35;1mCategorization Columns (0.006684)[0m   [0mSHOW FIELDS FROM `categorizations`[0m
+  [4;36;1mAssignment Load (0.008564)[0m   [0;1mSELECT * FROM `assignments` WHERE (assignments.project_id = 1) [0m
+  [4;35;1mAssignment Columns (0.011322)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (0.000580)[0m   [0;1mBEGIN[0m
+  [4;35;1mProject Update (0.000279)[0m   [0mUPDATE `projects` SET `created_at` = '2008-04-16 05:34:01', `updated_at` = '2008-04-16 08:34:30', `name` = 'Apollo 11' WHERE `id` = 1[0m
+  [4;36;1mTask Update (0.000152)[0m   [0;1mUPDATE `tasks` SET `created_at` = '2008-04-16 05:39:42', `complete` = 1, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1, `name` = 'Take Off' WHERE `id` = 4[0m
+  [4;35;1mTask Update (0.000129)[0m   [0mUPDATE `tasks` SET `created_at` = '2008-04-16 05:39:54', `complete` = 1, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1, `name` = 'Land on Moon' WHERE `id` = 5[0m
+  [4;36;1mTask Destroy (0.000108)[0m   [0;1m DELETE FROM `tasks`
+ WHERE `id` = 5
+[0m
+  [4;35;1mTask Update (0.000122)[0m   [0mUPDATE `tasks` SET `created_at` = '2008-04-16 05:40:11', `complete` = 0, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1, `name` = 'Come Back Safely' WHERE `id` = 6[0m
+  [4;36;1mAssignment Update (0.000131)[0m   [0;1mUPDATE `assignments` SET `created_at` = '2008-04-16 05:41:07', `title` = 'Commander', `employee_id` = 1, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 1[0m
+  [4;35;1mAssignment Update (0.000122)[0m   [0mUPDATE `assignments` SET `created_at` = '2008-04-16 05:41:07', `title` = 'Command Module Pilot', `employee_id` = 2, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 2[0m
+  [4;36;1mAssignment Update (0.000122)[0m   [0;1mUPDATE `assignments` SET `created_at` = '2008-04-16 05:42:08', `title` = 'Lunar Module Pilot', `employee_id` = 3, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 3[0m
+  [4;35;1mCategorization Update (0.000128)[0m   [0mUPDATE `categorizations` SET `created_at` = '2008-04-16 05:42:14', `category_id` = 1, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 1[0m
+  [4;36;1mCategorization Update (0.000136)[0m   [0;1mUPDATE `categorizations` SET `created_at` = '2008-04-16 05:42:14', `category_id` = 2, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 2[0m
+  [4;35;1mCategorization Update (0.000118)[0m   [0mUPDATE `categorizations` SET `created_at` = '2008-04-16 05:42:35', `category_id` = 2, `updated_at` = '2008-04-16 08:34:30', `project_id` = 1 WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000574)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 0.07320 (13 reqs/sec) | DB: 0.04752 (64%) | 302 Found [http://localhost/projects/1]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2008-04-16 08:34:30) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiJlByb2plY3Qgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh%0AdGVkLgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJTA4MjM0NmZkNWU2NGNiZTMx%0ANGYzNTk5ZjVlMGU3M2Q4--417172ccd7d9defe669f342828a1da3bad7206bc
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"projects"}
+  [4;35;1mProject Columns (0.001068)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.000752)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;35;1mTask Load (0.000226)[0m   [0mSELECT * FROM `tasks` WHERE (tasks.project_id = 1) [0m
+  [4;36;1mTask Columns (0.006197)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mAssignment Load (0.002529)[0m   [0mSELECT * FROM `assignments` WHERE (assignments.project_id = 1) [0m
+  [4;36;1mAssignment Columns (0.006975)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mEmployee Columns (0.013068)[0m   [0mSHOW FIELDS FROM `employees`[0m
+  [4;36;1mEmployee Load (0.000928)[0m   [0;1mSELECT * FROM `employees` WHERE (`employees`.`id` = 1) [0m
+  [4;35;1mEmployee Load (0.003692)[0m   [0mSELECT * FROM `employees` WHERE (`employees`.`id` = 2) [0m
+  [4;36;1mEmployee Load (0.002146)[0m   [0;1mSELECT * FROM `employees` WHERE (`employees`.`id` = 3) [0m
+  [4;35;1mCategory Load (0.000448)[0m   [0mSELECT categories.* FROM categories INNER JOIN categorizations ON categories.id = categorizations.category_id WHERE ((categorizations.project_id = 1)) [0m
+  [4;36;1mCategory Columns (0.003863)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Completed in 0.12427 (8 reqs/sec) | Rendering: 0.07636 (61%) | DB: 0.04189 (33%) | 200 OK [http://localhost/projects/1]

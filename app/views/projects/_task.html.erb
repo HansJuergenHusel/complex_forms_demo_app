@@ -9,10 +9,11 @@
 <% fields_for prefix, task do |task_form| -%> 
 <p> 
   Task: <%= task_form.text_field :name, :index => id_or_index %> 
-  <%= link_to_function "remove", "$(this).up('.task').remove()" %> 
 
   <%= task_form.check_box :complete, :index => id_or_index %>
   <label for="<%= "project_#{new_or_existing}_task_attributes_#{id_or_index}_complete" %>">Complete</label>
+
+  <%= link_to_function "mark for deletion", "$(this).up('.task').remove()" %> 
 
   <%# 
     this is how we track the records that are marked for deletion
