@@ -3,26 +3,32 @@
   <%=h @project.name %>
 </p>
 
+<%- if @project.tasks.length > 0 -%>
 <h3>Tasks</h3>
 <ul>
 <%- @project.tasks.each do |task| -%>
 <li><%= task.name %></li>
 <%- end -%>
 </ul>
+<%- end -%>
 
+<%- if @project.assignments.length > 0 -%>
 <h3>Assignments</h3>
 <ul>
 <%- @project.assignments.each do |assignment| -%>
 <li><%= assignment.employee.name %> - <%= assignment.title %></li>
 <%- end -%>
 </ul>
+<%- end -%>
 
+<%- if @project.categories.length > 0 -%>
 <h3>Categories</h3>
 <ul>
 <%- @project.categories.each do |category| -%>
 <li><%= category.name %></li>
 <%- end -%>
 </ul>
+<%- end -%>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

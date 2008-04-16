@@ -1,7 +1,7 @@
 <%- 
-  index ||= "INDEX"
+  index ||= assignment_counter
   new_or_existing = assignment.new_record? ? 'new' : 'existing'
-  id_or_index = assignment.new_record? ? assignment_counter : assignment.id 
+  id_or_index = assignment.new_record? ? index : assignment.id 
   prefix = "project[#{new_or_existing}_assignment_attributes][]" 
 -%> 
 
@@ -11,12 +11,12 @@
   <%- Employee.find(:all).each do |emp| -%>
     <%- radio_id = "project_#{new_or_existing}_assignment_attributes_#{id_or_index}_employee_id_#{emp.id}" -%>
     <%= assignment_form.radio_button :employee_id, emp.id, :id => radio_id, :index => id_or_index %>
+    <label for="<%= radio_id %>"><%= emp.name %></label>
   <%- end -%>
 </p>
 <p>  
   Title: <%= assignment_form.text_field :title, :index => id_or_index %> 
   <%= link_to_function "remove", "$(this).up('.assignment').remove()" %>
-  <%= assignment_form.hidden_field :marked_for_deletion, :value => assignment.marked_for_deletion.to_s %> <%# must be to_s because rails evaluates false and doesn't add the value parameter %>
 </p>
 <% end -%> 
 </div> 

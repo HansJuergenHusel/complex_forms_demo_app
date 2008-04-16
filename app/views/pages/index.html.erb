@@ -1,6 +1,27 @@
+<h2>The Setup</h2>
+
+<p>To get this app to run on your machine, run</p>
+
+<pre>
+  rake db:create
+  rake db:schema:load
+  rake db:dataset:load_fixtures DATASET=nasa
+  mongrel_rails start -d
+</pre>
+
+<h2>The Goal</h2>
+
 <p>
-  This app demonstrates how to create complex forms with multiple subforms that create, update and delete related models.
+  The goal of this app is to show how to create a complex form that captures 3 kinds of associations using skinny controllers and fat models.  The 3 kinds of associations it demos are:
 </p>
+
+<ul>
+  <li>has_many</li>
+  <li>has_many :through (with extra attributes on the join table)</li>
+  <li>has_many :through (with checkboxes to select the associated models)</li>
+</ul>
+
+<h2>Requirements</h2>
 
 <p>
   A form that manages a model and its related model must:
@@ -9,18 +30,52 @@
 <ul>
   <li>Handle validation of the main model as well as all of the associated models</li>
   <li>Create fully valid XHTML</li>
-  <li>Have completely atomic saves - if the save fails, everything fails</li>
+  <li>
+    Have completely atomic saves:
+    <ul>
+      <li>If you add a child item and there is a form error the child item needs to be redisplayed to the user, but not saved to the database</li>
+      <li>If you update a child item and there is an error the child item must be correctly displayed to the user but not saved in the database</li>
+      <li>If you remove a child item and there is a form error, the child must be hidden from view on the page but remain in the database</li>
+      <li>On a successful save all new objects must be created, existing objects updated and removed object deleted</li>
+    </ul>
+  </li>
   <li>Run updates in a transaction</li>
-  <li>Handle dynamic additions (like adding multiple tasks to a project) as well as selection from a pre-existing list (like a list of checkboxes for categories)</li>
+  <li>
+    Handle both means of data entry:
+    <ul>
+      <li>As subforms that can be added</li>
+      <li>As a list of checkboxes that can be checked</li>
+    </ul>
+  </li>
   <li>Handle all of the rails helpers such as check boxes and radio buttons</li>
+  <li>Work the same every time a user clicks refresh or submits</li>
 </ul>
 
-<h2>Handling validation</h2>
+<h3>Handling validation</h3>
 
 <p>Instead of using the rails default <tt>error_messages_for</tt> helper, just use a partial.</p>
 
-<h2>Create fully valid XHMTL</h2>
+<h3>Create fully valid XHMTL</h3>
 
-<p>This requires a complex interaction between the partial and the javascript code in application.js</p>
+<p>To output valid XHTML you must:</p>
 
-<p>This relies on the index feature, as well as the partial_counter feature.</p>
+<ul>
+  <li>Set an index on every child field</li>
+  <li>Have the javascript that dynamically adds fields set the index correctly as well</li>
+</ul>
+
+<p>This requires a complex interaction between the partial and the javascript code.  The necessary parts are spread across multiple files:</p>
+
+<ul>
+  <li>public/javascripts/application.js contains a generic class that you can use for any subform, and add multiple subforms to a page</li>
+  <li>Each child form's partial must instantiate the javascript - I use a content_for block and inject that code into the head of the document</li>
+  <li>If you are using content_for like I am, then the app/views/application.html.erb file must have a corresponding yield statement</li>
+</ul>
+
+<p>Rails makes setting the index properly a breeze with it's <tt>:index</tt> option and the <tt>partial_counter</tt> local variable in partials that are fed collections.</p>
+
+<p>The index does not work with radio buttons (this may be fixed in edge) and the standard rails labels output invalid XHTML, so those have to be coded manually.</p>
+
+<h3>Marking objects for deletion</h3>
+
+<p>This means being able to mark an object for deletion before actually deleting it.  I've accomplished this in a site-wide way with <tt>config/initializers/marked_for_deletion.rb</tt></p>

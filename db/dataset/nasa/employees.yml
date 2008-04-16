@@ -1,0 +1,16 @@
+--- 
+employee_00001: 
+  created_at: 2008-04-16 05:13:07 -04:00
+  id: 1
+  name: Niel Armstrong
+  updated_at: 2008-04-16 05:13:07 -04:00
+employee_00002: 
+  created_at: 2008-04-16 05:13:29 -04:00
+  id: 2
+  name: Michael Collins
+  updated_at: 2008-04-16 05:13:29 -04:00
+employee_00003: 
+  created_at: 2008-04-16 05:13:38 -04:00
+  id: 3
+  name: Buzz Aldrin
+  updated_at: 2008-04-16 05:16:43 -04:00

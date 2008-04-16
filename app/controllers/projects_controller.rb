@@ -61,6 +61,11 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
 
+    # We need to have this here so it can call the attributes
+    # Otherwise the model would have no idea that we want
+    # to delete all of the existing subforms
+    params[:project][:existing_task_attributes] ||= {} 
+
     respond_to do |format|
       if @project.update_attributes(params[:project])
         flash[:notice] = 'Project was successfully updated.'

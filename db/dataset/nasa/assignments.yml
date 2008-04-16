@@ -1,0 +1,22 @@
+--- 
+assignment_00001: 
+  created_at: 2008-04-16 05:41:07 -04:00
+  employee_id: 1
+  id: 1
+  project_id: 1
+  title: Commander
+  updated_at: 2008-04-16 05:42:35 -04:00
+assignment_00002: 
+  created_at: 2008-04-16 05:41:07 -04:00
+  employee_id: 2
+  id: 2
+  project_id: 1
+  title: Command Module Pilot
+  updated_at: 2008-04-16 05:42:35 -04:00
+assignment_00003: 
+  created_at: 2008-04-16 05:42:08 -04:00
+  employee_id: 3
+  id: 3
+  project_id: 1
+  title: Lunar Module Pilot
+  updated_at: 2008-04-16 05:42:35 -04:00

@@ -1,11 +1,18 @@
 <%- content_for :head do -%>
   <script type="text/javascript" charset="utf-8">
    //<![CDATA[
-     taskForm = new Subform('<%= escape_javascript(render(:partial => "task", :object => Task.new)) %>',<%= @project.tasks.length %>,'tasks');
-     assignmentForm = new Subform('<%= escape_javascript(render(:partial => "assignment", :object => Assignment.new)) %>',<%= @project.assignments.length %>,'assignments');
+     taskForm = new Subform('<%= escape_javascript(render(:partial => "task", :object => Task.new, :locals => {:index => "INDEX"})) %>',<%= @project.tasks.length %>,'tasks');
+     assignmentForm = new Subform('<%= escape_javascript(render(:partial => "assignment", :object => Assignment.new, :locals => {:index => "INDEX"})) %>',<%= @project.assignments.length %>,'assignments');
    //]]>
   </script>
 <%- end -%>
+
+<p>
+  <%= link_to_function "Show/Hide Params", visual_effect(:toggle_blind, :params, :duration => "0.1") %>
+</p>
+<div id="params" style="display:none;">
+  <%= debug params %>
+</div>
 
 <%= render :partial => "error_messages", :locals => {:project => @project} %>
 
@@ -22,11 +29,13 @@
         <%= render :partial => 'task', :collection => @project.tasks %>
       </div>
       <p>
-        <%= add_task_link "Add a task" %>
+        <%= link_to_function "Add Task", "taskForm.add()" %>
       </p>
     </div>
     <div class="yui-u">
-
+      <p>Add several tasks and leave them blank, then click submit to see validation in action.</p>
+      <p>Notice how clicking the label properly highlights the correct check box.</p>
+      <p>Click <%= link_to_function "Show/Hide Params", visual_effect(:toggle_blind, :params, :duration => "0.1") %> to verify that the checkbox is being sent back to the server.</p>
     </div>
   </div>
 </fieldset>
@@ -39,11 +48,12 @@
         <%= render :partial => 'assignment', :collection => @project.assignments.select{|t| t.marked_for_deletion == false} %>
       </div>
       <p>
-        <%= add_assignment_link "Add an assignment" %>
+        <%= link_to_function "Add Task", "assignmentForm.add()" %>
       </p>
     </div>
     <div class="yui-u">
-
+      <p>Notice how clicking the label properly highlights the correct radio button.</p>
+      <p>New assignments have no person there intentionally, so that we can test what happens when it is sent back with nothing.</p>
     </div>
   </div>
 

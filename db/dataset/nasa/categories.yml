@@ -1,0 +1,16 @@
+--- 
+category_00001: 
+  created_at: 2008-04-16 05:14:54 -04:00
+  id: 1
+  name: Space
+  updated_at: 2008-04-16 05:14:54 -04:00
+category_00002: 
+  created_at: 2008-04-16 05:15:04 -04:00
+  id: 2
+  name: Aeronautics
+  updated_at: 2008-04-16 05:15:04 -04:00
+category_00003: 
+  created_at: 2008-04-16 05:15:14 -04:00
+  id: 3
+  name: Aquatics
+  updated_at: 2008-04-16 05:15:14 -04:00

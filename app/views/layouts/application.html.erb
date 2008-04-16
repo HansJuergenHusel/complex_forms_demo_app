@@ -7,6 +7,7 @@
   <title>Changes Test</title>
   <%= javascript_include_tag :defaults %> 
   <%= stylesheet_link_tag "reset-fonts-grids", "base", "application" %>
+  <%= yield :head %>
 </head>
 <body>
   <div id="doc3" class="yui-t1">
@@ -24,12 +25,13 @@
       </div>
       <div class="yui-b">
         <ul>
-          <li><%= link_to "home", "/" %></li>
+          <li><%= link_to "Home", "/" %></li>
         </ul>
         <ul>
           <%- [Project].each do |model| -%>
           <li><%= link_to model.to_s.pluralize, eval("#{model.to_s.pluralize.downcase}_url")  %></li>
           <%- end -%>
+          <li><%= link_to "New Project", new_project_url  %></li>
         </ul>
         <ul>
           <%- [Employee, Category].each do |model| -%>

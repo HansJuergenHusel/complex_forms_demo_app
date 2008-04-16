@@ -9,9 +9,9 @@
 
 <% for task in @tasks %>
   <tr>
-    <td><%=h task.project_id %></td>
+    <td><%=h task.project.name %></td>
     <td><%=h task.name %></td>
-    <td><%=h task.completed %></td>
+    <td><%=h task.complete %></td>
   </tr>
 <% end %>
 </table>

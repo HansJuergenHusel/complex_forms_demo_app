@@ -60,6 +60,7 @@ table{
 td, th{
   vertical-align:top;
   text-align:left;
+  border:1px solid #ccc;
 }
 
 fieldset{

@@ -1,7 +1,7 @@
 <%- 
-  index ||= "INDEX"
+  index ||= task_counter
   new_or_existing = task.new_record? ? 'new' : 'existing'
-  id_or_index = task.new_record? ? task_counter : task.id 
+  id_or_index = task.new_record? ? index : task.id 
   prefix = "project[#{new_or_existing}_task_attributes][]" 
 -%> 
 
@@ -10,6 +10,16 @@
 <p> 
   Task: <%= task_form.text_field :name, :index => id_or_index %> 
   <%= link_to_function "remove", "$(this).up('.task').remove()" %> 
+
+  <%= task_form.check_box :complete, :index => id_or_index %>
+  <label for="<%= "project_#{new_or_existing}_task_attributes_#{id_or_index}_complete" %>">Complete</label>
+
+  <%# 
+    this is how we track the records that are marked for deletion
+    must be to_s because rails evaluates false and doesn't add the value parameter 
+  %>
+  <%= task_form.hidden_field :marked_for_deletion, :value => task.marked_for_deletion.to_s, :index => id_or_index %>
+
 </p> 
 <% end -%> 
 </div> 
