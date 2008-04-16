@@ -1,12 +1,14 @@
-<h2>The Setup</h2>
+<h2>Instructions</h2>
 
 <p>To get this app to run on your machine edit your <tt>database.yml</tt> file then run:</p>
 
 <pre>
   rake db:create
-  rake db:schema:load
+  rake db:migrate
   rake db:dataset:load_fixtures DATASET=nasa
 </pre>
+
+<p>Then go to the projects page and click "Edit".  Try every combination of adding, updating and deleting, watch the params and the validations and check your database to see when things get committed.</p>
 
 <h2>The Goal</h2>
 
@@ -46,7 +48,7 @@
       <li>As a list of checkboxes that can be checked</li>
     </ul>
   </li>
-  <li>Handle all of the rails helpers such as check boxes and radio buttons</li>
+  <li>Handle all of the rails helpers such as check boxes, date fields and radio buttons</li>
   <li>Work the same every time a user clicks refresh or submits</li>
 </ul>
 

@@ -19,7 +19,25 @@ class Project < ActiveRecord::Base
   after_update :save_tasks
   after_update :save_assignments
   after_update :save_categorizations
-  
+
+  class << self
+
+    # If it's invalid return false
+    # If it's valid and saves, return true
+    # If there is an error in the transaction, re-raise the error
+    def save(project,project_attributes = nil)
+      project.attributes = project_attributes unless project_attributes.nil?
+      updated = false
+      Project.transaction do
+        updated = project.save
+      end
+      updated
+    rescue Exception => e
+      throw e
+    end
+
+  end
+
   def new_task_attributes=(task_attributes)
     task_attributes.each do |id,attributes|
       tasks.build(attributes)
@@ -72,27 +90,34 @@ class Project < ActiveRecord::Base
 
   private
 
-  # If it has marked_for_deleted == true it will destroy itself after saving
-  # This will capture the change, then call destroy
+  # If these have marked_for_deleted == true they will
+  # destroy themselves after saving
+  # This will capture the change in the database first, 
+  # then call destroy
+  #
+  # use save! instead of save because if there is an error
+  # it will cancel out the transaction
+
   def save_tasks
     tasks.each do |task|
-      task.save
+      task.save!
+
+      # uncomment this line to intentionally throw an error to test how
+      # the form handles the transaction error
+      #raise "Some cryptic error that no-one understands"
+
     end
   end
 
-  # If it has marked_for_deleted == true it will destroy itself after saving
-  # This will capture the change, then call destroy
   def save_assignments
     assignments.each do |assignment|
-      assignment.save
+      assignment.save!
     end
   end
 
-  # If it has marked_for_deleted == true it will destroy itself after saving
-  # This will capture the change, then call destroy
   def save_categorizations
     categorizations.each do |categorization|
-      categorization.save
+      categorization.save!
     end
   end
 

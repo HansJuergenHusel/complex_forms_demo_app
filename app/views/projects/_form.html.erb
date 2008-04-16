@@ -48,13 +48,15 @@
         <%= render :partial => 'assignment', :collection => @project.assignments.select{|t| t.marked_for_deletion == false} %>
       </div>
       <p>
-        <%= link_to_function "Add Task", "assignmentForm.add()" %>
+        <%= link_to_function "Add Assignment", "assignmentForm.add()" %>
       </p>
     </div>
     <div class="yui-u">
       <p>Add several assignments and leave them blank, then click submit to see validation in action.</p>
       <p>Notice how clicking the label properly highlights the correct radio button.</p>
-      <p>Click <%= link_to_function "Show/Hide Params", visual_effect(:toggle_blind, :params, :duration => "0.1") %> to see the params.  If you haven't selected anything notice that it's absent from the params, but it doesn't matter because the validations pick it up.</p>
+      <p>Click <%= link_to_function "Show/Hide Params", visual_effect(:toggle_blind, :params, :duration => "0.1") %> to see the params.</p>
+      <p>If you haven't selected anything notice that it's absent from the params, but it doesn't matter because the validations pick it up.</p>
+      <p>Remove one of the saved assignments, but leave some other field in the form blank to trigger the validations.  Notice that your Assignment is not deleted until the save is successful.</p>
     </div>
   </div>
 

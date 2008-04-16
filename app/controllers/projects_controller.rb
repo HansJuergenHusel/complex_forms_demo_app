@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(params[:project])
 
     respond_to do |format|
-      if @project.save
+      if Project.save(@project)
         flash[:notice] = 'Project was successfully created.'
         format.html { redirect_to(@project) }
         format.xml  { render :xml => @project, :status => :created, :location => @project }
@@ -67,7 +67,7 @@ class ProjectsController < ApplicationController
     params[:project][:existing_task_attributes] ||= {} 
 
     respond_to do |format|
-      if @project.update_attributes(params[:project])
+      if Project.save(@project,params[:project])
         flash[:notice] = 'Project was successfully updated.'
         format.html { redirect_to(@project) }
         format.xml  { head :ok }
@@ -88,5 +88,11 @@ class ProjectsController < ApplicationController
       format.html { redirect_to(projects_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  private
+  
+  def save_in_transaction
+    
   end
 end

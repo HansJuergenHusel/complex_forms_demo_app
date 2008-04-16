@@ -17,8 +17,8 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: changes_development
-  username: jeff
+  database: complex_form_development
+  username: <%= ENV['USER'] %>
   password:
 
 # Warning: The database defined as 'test' will be erased and
@@ -27,14 +27,6 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: changes_test
-  username: jeff
+  database: complex_form_test
+  username: <%= ENV['USER'] %>
   password:
-
-production:
-  adapter: mysql
-  encoding: utf8
-  database: changes_production
-  username: root
-  password: 
-  socket: /opt/local/var/run/mysql5/mysqld.sock
