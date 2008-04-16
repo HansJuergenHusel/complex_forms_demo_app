@@ -2,19 +2,16 @@
 
 <table>
   <tr>
-    <th>Employee</th>
     <th>Project</th>
+    <th>Employee</th>
     <th>Title</th>
   </tr>
 
 <% for assignment in @assignments %>
   <tr>
-    <td><%=h assignment.employee_id %></td>
-    <td><%=h assignment.project_id %></td>
+    <td><%=h assignment.project.name %></td>
+    <td><%=h assignment.employee.name %></td>
     <td><%=h assignment.title %></td>
-    <td><%= link_to 'Show', assignment %></td>
-    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-    <td><%= link_to 'Destroy', assignment, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

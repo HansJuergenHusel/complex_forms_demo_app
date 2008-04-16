@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :categories
 
+  map.resources :categorizations
   
-  map.connect "", :controller => "projects"
+  map.connect "", :controller => "pages"
   
   map.resources :assignments
 

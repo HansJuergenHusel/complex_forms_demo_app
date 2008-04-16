@@ -1,0 +1,26 @@
+<%- associations = ["tasks","assignments"] -%>
+<%- unless project.errors.empty? -%>
+<div id="errorExplanation" class="errorExplanation">
+<h2>Your form could not be saved</h2>
+<p>Please correct the following errors and submit again:</p>
+<ul>
+  <%- project.errors.each do |attr,message| -%>
+    <%= content_tag :li, "#{attr.humanize} #{message}" unless associations.include?(attr) %>
+  <%- end -%>
+  <%- associations.each do |association| -%>
+    <%- project.send(association).each_with_index do |object, index| -%>
+      <%- unless object.errors.empty? -%>
+      <li>
+        <%= association.singularize.humanize %> <%= index + 1 %> has the following errors:
+        <ul>
+          <%- object.errors.each_full do |att_message| -%>
+            <li><%= att_message %></li>
+          <%- end -%>
+        </ul>
+      </li>
+      <%- end -%>
+    <%- end -%>
+  <%- end -%>
+</ul>
+</div>
+<%- end -%>

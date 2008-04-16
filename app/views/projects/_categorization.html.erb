@@ -1,1 +1,9 @@
+<% new_or_existing = categorization.new_record? ? 'new' : 'existing' %>
+<% prefix = "project[#{new_or_existing}_categorization_attributes][]" %>
+<% fields_for prefix, category do |category_form| -%>
+<p>
+  <%= category_form.check_box :category_id, {:checked => @project.categorizations.include?(categorization)}, category.id %>
+  <label for="project_<%= new_or_existing %>_categorization_attributes_<%=  category.id  %>_category_id"><%= category.name %></label>
+</p>
+<% end -%>
 

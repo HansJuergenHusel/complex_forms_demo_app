@@ -1,0 +1,26 @@
+<p>
+  This app demonstrates how to create complex forms with multiple subforms that create, update and delete related models.
+</p>
+
+<p>
+  A form that manages a model and its related model must:
+</p>
+
+<ul>
+  <li>Handle validation of the main model as well as all of the associated models</li>
+  <li>Create fully valid XHTML</li>
+  <li>Have completely atomic saves - if the save fails, everything fails</li>
+  <li>Run updates in a transaction</li>
+  <li>Handle dynamic additions (like adding multiple tasks to a project) as well as selection from a pre-existing list (like a list of checkboxes for categories)</li>
+  <li>Handle all of the rails helpers such as check boxes and radio buttons</li>
+</ul>
+
+<h2>Handling validation</h2>
+
+<p>Instead of using the rails default <tt>error_messages_for</tt> helper, just use a partial.</p>
+
+<h2>Create fully valid XHMTL</h2>
+
+<p>This requires a complex interaction between the partial and the javascript code in application.js</p>
+
+<p>This relies on the index feature, as well as the partial_counter feature.</p>

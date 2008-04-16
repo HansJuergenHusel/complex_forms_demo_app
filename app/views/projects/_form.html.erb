@@ -1,53 +1,74 @@
-<%= error_messages_for :project %> 
+<%- content_for :head do -%>
+  <script type="text/javascript" charset="utf-8">
+   //<![CDATA[
+     taskForm = new Subform('<%= escape_javascript(render(:partial => "task", :object => Task.new)) %>',<%= @project.tasks.length %>,'tasks');
+     assignmentForm = new Subform('<%= escape_javascript(render(:partial => "assignment", :object => Assignment.new)) %>',<%= @project.assignments.length %>,'assignments');
+   //]]>
+  </script>
+<%- end -%>
 
-<% form_for @project do |f| -%> 
-<p> 
-  Name: <%= f.text_field :name %> 
+<%= render :partial => "error_messages", :locals => {:project => @project} %>
+
+<% form_for @project do |f| -%>
+<p>
+  Name: <%= f.text_field :name %>
 </p>
 
 <fieldset>
   <legend>Tasks</legend>
-  <div id="tasks"> 
-    <%= render :partial => 'task', :collection => @project.tasks %> 
-  </div> 
-  <p> 
-  <%= add_task_link "Add a task" %> 
-</p> 
+  <div class="yui-g">
+    <div class="yui-u first">
+      <div id="tasks">
+        <%= render :partial => 'task', :collection => @project.tasks %>
+      </div>
+      <p>
+        <%= add_task_link "Add a task" %>
+      </p>
+    </div>
+    <div class="yui-u">
+
+    </div>
+  </div>
 </fieldset>
 
 <fieldset>
   <legend>Assignments</legend>
-  <div id="assignments"> 
-    <%= render :partial => 'assignment', :collection => @project.assignments %> 
-  </div> 
-  <p> 
-  <%= add_assignment_link "Add an assignment" %> 
-</p> 
+  <div class="yui-g">
+    <div class="yui-u first">
+      <div id="assignments">
+        <%= render :partial => 'assignment', :collection => @project.assignments.select{|t| t.marked_for_deletion == false} %>
+      </div>
+      <p>
+        <%= add_assignment_link "Add an assignment" %>
+      </p>
+    </div>
+    <div class="yui-u">
+
+    </div>
+  </div>
+
 </fieldset>
 
 <fieldset>
   <legend>Categories</legend>
-  <div id="categories">
-
-    <%- for category in Category.find(:all) -%>
-    <div class="categorization">
-    <% categorization = @project.categorizations.select{|c| c.category == category}.first || Categorization.new %>
-    <% new_or_existing = categorization.new_record? ? 'new' : 'existing' %> 
-    <% prefix = "project[#{new_or_existing}_categorization_attributes][]" %> 
-    <% fields_for prefix, category do |category_form| -%> 
-    <p> 
-      <%= category_form.check_box :category_id, {:checked => @project.categorizations.include?(categorization)}, category.id %> 
-      <label for="project_category_attributes_<%=  category.id  %>_id"><%= category.name %></label>
-    </p>
-    <% end -%> 
+  <div class="yui-g">
+    <div class="yui-u first">
+      <div id="categories">
+        <%- for category in Category.find(:all) -%>
+        <div class="categorization">
+          <%= render :partial => 'categorization', :object => (@project.categorizations.select{|c| c.category == category}.first || Categorization.new), :locals => {:category => category} %>
+        </div>
+        <% end -%>
+      </div>
     </div>
-    <% end -%> 
+    <div class="yui-u">
 
-  </div> 
+    </div>
+  </div>
+
 </fieldset>
 
-
-<p> 
-<%= f.submit "Submit" %> 
-</p> 
-<% end -%> 
+<p>
+<%= f.submit "Submit" %>
+</p>
+<% end -%>
