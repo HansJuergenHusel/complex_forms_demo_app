@@ -191,3 +191,67 @@
 <h3>Marking objects for deletion</h3>
 
 <p>This means being able to mark an object for deletion before actually deleting it.  I've accomplished this in a site-wide way with <tt>config/initializers/marked_for_deletion.rb</tt></p>
+
+<h3>Performing the save in a transaction</h3>
+
+<p>Rails doesn't include the after_update callbacks in it's default transactions, so you have to do that yourself.  It has 3 parts:</p>
+
+<ul>
+  <li>
+    A method in the project model that performs the save in a transaction and re-raises the error:
+    <pre>
+  class &lt;&lt; self
+    def save(project,project_attributes = nil)
+      project.attributes = project_attributes unless project_attributes.nil?
+      updated = false
+      Project.transaction do
+        updated = project.save
+      end
+      updated
+    rescue Exception =&gt; e
+      throw e
+    end
+  end
+    </pre>
+  </li>
+  <li>
+    Make sure the child objects raise errors when they are saved:
+    <pre>
+  def save_assignments
+    assignments.each do |assignment|
+      assignment.save!
+    end
+  end
+    </pre>
+  </li>
+  <li>
+    Update the controller code to call the correct method:
+    <pre>
+  def create
+    @project = Project.new(params[:project])
+    respond_to do |format|
+      if Project.save(@project)
+        ...
+      else
+        ...
+      end
+    end
+  end      
+    </pre>
+    <br/>
+    <pre>
+  def update
+    @project = Project.find(params[:id])
+    params[:project][:existing_task_attributes] ||= {} 
+
+    respond_to do |format|
+      if Project.save(@project,params[:project])
+        ...
+      else
+        ...
+      end
+    end
+  end
+    </pre>
+  </li>
+</ul>

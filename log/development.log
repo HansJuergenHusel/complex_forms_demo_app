@@ -7229,3 +7229,11 @@ Processing PagesController#index (for 127.0.0.1 at 2008-04-16 08:09:02) [GET]
 Rendering template within layouts/application
 Rendering pages/index
 Completed in 0.07656 (13 reqs/sec) | Rendering: 0.07438 (97%) | DB: 0.00104 (1%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-04-16 08:15:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMDgyMzQ2ZmQ1ZTY0Y2JlMzE0%0AZjM1OTlmNWUwZTczZDg%3D--87c1c196d12346170be39fb2d53222ef91eb7c77
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 0.03539 (28 reqs/sec) | Rendering: 0.03303 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
