@@ -1,10 +1,29 @@
-= Complex Forms Helper
+= Atomic Saves
 
-== The Goal
+A common design pattern is to have a form that handles multiple models, in any of the following configurations:
 
-Make it easier to create forms that encompass multiple models while maintaining skinny controllers _and_ skinny models.
+* has_many
+* has_many :through
+* has_and_belongs_to_many
+* has_one
 
-= Requirements
+These multi-model forms require a complex interaction between Javascript, models, views and controllers.  Due to the complexity and the variety of scenarios one plugin can never totally abstract this process.  This plugin serves to help keep your models dry in a few of the most common scenarios.
+
+== Installation
+
+  script/plugin install git://github.com/zilkey/atomic_saves.git
+
+== Common Scenarios
+
+Some of the most common scenarios I've come across are:
+
+* A parent form with multiple child forms that get added to or removed from the screen via javascript (adding tasks to a todo list)
+* A list of checkboxes to choose from that control a habtm or hmt association (checking off permissions for a user)
+* A text box of comma or space-separated values that gets parsed (typing in tags, some of which may exist already)
+
+If you remove a child record and save, and the save fails because of validation, and you cancel, the data should be left unchanged.
+
+= Requirements Overview
 
 A form that manages a model and its related model must:
 
@@ -39,23 +58,19 @@ So far the plugin only manages:
 * has_and_belongs_to_many via a list of checkboxes
 * has_one
 
-= Domain Description for this app
+= Usage
 
-Project is the main object here, and is defined as:
+Let's say that Project is the main object here, and is defined as:
 
   class Project < ActiveRecord::Base
-    has_many :tasks
-    has_many :assignments
+    has_many :tasks, :single_save => true
+    has_many :assignments, :single_save => true
     has_many :employees, :through => :assignments
     has_many :categorizations
-    has_many :categories, :through => :categorizations
+    has_many :categories, :through => :categorizations, :single_save => true
 
     validates_presence_of :name
     validates_associated :tasks, :assignments
-
-    after_update :save_tasks
-    after_update :save_assignments
-    after_update :save_categorizations
   end
 
 Task belongs to Project and requires a name:
@@ -159,57 +174,6 @@ This means being able to mark an object for deletion before actually deleting it
 Performing the save in a transaction
 
 Rails doesn't include the after_update callbacks in it's default transactions, so you have to do that yourself. It has 3 parts:
-
-A method in the project model that performs the save in a transaction and re-raises the error:
-
-  class << self
-    def save(project,project_attributes = nil)
-      project.attributes = project_attributes unless project_attributes.nil?
-      updated = false
-      Project.transaction do
-        updated = project.save
-      end
-      updated
-    rescue Exception => e
-      throw e
-    end
-  end
-          
-Make sure the child objects raise errors when they are saved:
-
-  def save_assignments
-    assignments.each do |assignment|
-      assignment.save!
-    end
-  end
-
-Update the controller code to call the correct method:
-
-  def create
-    @project = Project.new(params[:project])
-    respond_to do |format|
-      if Project.save(@project)
-        ...
-      else
-        ...
-      end
-    end
-  end      
-
-  def update
-    @project = Project.find(params[:id])
-    params[:project][:existing_task_attributes] ||= {} 
-
-    respond_to do |format|
-      if Project.save(@project,params[:project])
-        ...
-      else
-        ...
-      end
-    end
-  end
-          
-
 
 == Create Associations From Params
 

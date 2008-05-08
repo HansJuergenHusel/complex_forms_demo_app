@@ -1,3 +1,0 @@
-sqlite3:
-  :adapter: sqlite3
-  :dbfile: vendor/plugins/complex_forms_helper/spec/db/complex_forms_helper.sqlite3.db

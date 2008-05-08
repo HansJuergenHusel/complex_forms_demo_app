@@ -1,4 +1,4 @@
-require 'association_creation_from_params'
+require 'associations'
 require 'marked_for_deletion'
 require 'view_helpers'
 ActiveRecord::Base.send :include, MarkedForDeletion

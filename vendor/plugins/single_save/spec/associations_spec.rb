@@ -1,12 +1,12 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 class Winken < ActiveRecord::Base
-  has_many :blinkens, :enable_creation_from_params => true
-  has_many :nods, :through => :blinkens, :enable_creation_from_params => true
+  has_many :blinkens, :single_save => true
+  has_many :nods, :through => :blinkens, :single_save => true
   has_many :taggings
-  has_many :tags, :through => :taggings, :enable_creation_from_params => true
-  has_and_belongs_to_many :bars, :enable_creation_from_params => true
-  has_one :foo, :enable_creation_from_params => true
+  has_many :tags, :through => :taggings, :single_save => true
+  has_and_belongs_to_many :bars, :single_save => true
+  has_one :foo, :single_save => true
 end
 
 class Blinken < ActiveRecord::Base

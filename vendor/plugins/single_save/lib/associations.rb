@@ -11,9 +11,9 @@ module AssociationCreationFromParams
     # == Example
     #
     #   class Project
-    #     has_many :tasks, :enable_creation_from_params => true
+    #     has_many :tasks, :single_save => true
     #     has_many :resource_assignments
-    #     has_many :resources, :through => :resource_assignments, :enable_creation_from_params => true
+    #     has_many :resources, :through => :resource_assignments, :single_save => true
     #   end
     #
     # The following methods are added for the has_many:
@@ -31,9 +31,9 @@ module AssociationCreationFromParams
     # If you define this on both sides of the relationship, you'll cause an endless loop
     # TODO: document the types of hashes these expect
     def has_many_with_creation_from_params(association_id, options = {}, &extension)
-      enable_creation_from_params = options.delete(:enable_creation_from_params)
+      single_save = options.delete(:single_save)
       reflection = create_has_many_reflection(association_id, options, &extension)
-      if enable_creation_from_params
+      if single_save
         if options[:through]
 
           define_method("#{Inflector.singularize(association_id.to_s)}_attributes=") do |child_attributes|
@@ -101,7 +101,7 @@ module AssociationCreationFromParams
     # == Example
     #
     #   class Project
-    #     has_one :project_detail, :enable_creation_from_params => true
+    #     has_one :project_detail, :single_save => true
     #   end
     #
     # The following methods are added for the has_one:
@@ -109,11 +109,11 @@ module AssociationCreationFromParams
     # * save_project_detail
     # * after_update :save_project_detail
     def has_one_with_creation_from_params(association_id, options = {})
-      enable_creation_from_params = options.delete(:enable_creation_from_params)
-      if enable_creation_from_params
+      single_save = options.delete(:single_save)
+      if single_save
         if options[:through]
           reflection = create_has_one_through_reflection(association_id, options)
-          raise ":enable_creation_from_params is not implemented yet for has_one :through"
+          raise ":single_save is not implemented yet for has_one :through"
         else
           reflection = create_has_one_reflection(association_id, options)
 
@@ -135,9 +135,9 @@ module AssociationCreationFromParams
     end
 
     def has_and_belongs_to_many_with_creation_from_params(association_id, options = {}, &extension)
-      enable_creation_from_params = options.delete(:enable_creation_from_params)
+      single_save = options.delete(:single_save)
       reflection = create_has_and_belongs_to_many_reflection(association_id, options, &extension)
-      if enable_creation_from_params
+      if single_save
         define_method "#{Inflector.singularize(association_id.to_s)}_attributes=" do |habtm_attributes|
           habtm_attributes.each do |id, value|
             existing = send(association_id).detect{|t| t.send(t.class.primary_key).to_s == id.to_s}
