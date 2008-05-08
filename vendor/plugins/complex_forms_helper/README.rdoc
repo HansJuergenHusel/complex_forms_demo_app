@@ -1,0 +1,42 @@
+= Complex Forms Helper
+
+== Create Associations From Params
+
+This adds methods when you create an association:
+
+  class Page < ActiveRecord::Base
+    has_many :meta_tags
+  end
+
+  page = Page.new
+  page.new_meta_tag_attributes = {"1" => {:name => "name"}} # => 1 is an arbitrary index, can be anything
+  page.existing_meta_tag_attributes = {"1" => {:name => "name"}} # => 1 is the actual id of the attribute
+
+== Mark For Deletion
+
+Adds an attribute named marked_for_deletion to your ActiveRecord models. 
+
+If you already have a field by that name, it will write to it.  If you don't, it will be a non-persisted attribute.
+
+I created this plugin with excellent RSpec Plugin Generator: http://github.com/pat-maddox/rspec-plugin-generator/tree/master
+
+== Example
+
+The following will all correctly set marked_for_deletion to true
+
+  page = Page.new
+  page.marked_for_deletion = true
+  page.marked_for_deletion = "true"
+  page.marked_for_deletion = 1
+  page.marked_for_deletion = "1"
+
+The following will set marked_for_deletion to false
+
+  page = Page.new
+  page.marked_for_deletion
+  page.marked_for_deletion = false
+  page.marked_for_deletion = "false"
+  page.marked_for_deletion = "any string"
+  page.marked_for_deletion = 2
+
+Copyright (c) 2008 Jeff Dean, released under the MIT license

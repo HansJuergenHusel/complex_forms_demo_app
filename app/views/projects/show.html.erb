@@ -30,5 +30,12 @@
 </ul>
 <%- end -%>
 
+<%- if @project.project_detail -%>
+<h3>Deatil</h3>
+<ul>
+<li><%= @project.project_detail.description %></li>
+</ul>
+<%- end -%>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

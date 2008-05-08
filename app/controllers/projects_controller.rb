@@ -67,7 +67,7 @@ class ProjectsController < ApplicationController
     params[:project][:existing_task_attributes] ||= {} 
 
     respond_to do |format|
-      if Project.save(@project,params[:project])
+      if @project.update_attributes params[:project]
         flash[:notice] = 'Project was successfully updated.'
         format.html { redirect_to(@project) }
         format.xml  { head :ok }

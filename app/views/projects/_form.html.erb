@@ -14,7 +14,7 @@
   <%= debug params %>
 </div>
 
-<%= render :partial => "error_messages", :locals => {:project => @project} %>
+<%= render :partial => "error_messages", :object => @project, :locals => {:order => [:name, :tasks, :assignments, :project_detail, :all]} %>
 
 <% form_for @project do |f| -%>
 <p>
@@ -22,11 +22,11 @@
 </p>
 
 <fieldset>
-  <legend>Tasks</legend>
+  <legend>Tasks (has_many)</legend>
   <div class="yui-g">
     <div class="yui-u first">
       <div id="tasks">
-        <%= render :partial => 'task', :collection => @project.tasks %>
+        <%= render :partial => 'task', :collection => @project.tasks_without_deleted %>
       </div>
       <p>
         <%= link_to_function "Add Task", "taskForm.add()" %>
@@ -41,11 +41,11 @@
 </fieldset>
 
 <fieldset>
-  <legend>Assignments</legend>
+  <legend>Assignments (has_many)</legend>
   <div class="yui-g">
     <div class="yui-u first">
       <div id="assignments">
-        <%= render :partial => 'assignment', :collection => @project.assignments.select{|t| t.marked_for_deletion == false} %>
+        <%= render :partial => 'assignment', :collection => @project.assignments_without_deleted %>
       </div>
       <p>
         <%= link_to_function "Add Assignment", "assignmentForm.add()" %>
@@ -63,15 +63,11 @@
 </fieldset>
 
 <fieldset>
-  <legend>Categories</legend>
+  <legend>Categories (has_many :through => :categorizations)</legend>
   <div class="yui-g">
     <div class="yui-u first">
       <div id="categories">
-        <%- for category in Category.find(:all) -%>
-        <div class="categorization">
-          <%= render :partial => 'categorization', :object => (@project.categorizations.select{|c| c.category == category}.first || Categorization.new), :locals => {:category => category} %>
-        </div>
-        <% end -%>
+          <%= render :partial => 'category', :collection => Category.all, :locals => {:checked => @project.categories} %>
       </div>
     </div>
     <div class="yui-u">
@@ -79,6 +75,22 @@
     </div>
   </div>
 
+</fieldset>
+
+<fieldset>
+  <legend>Project Detail (has_one)</legend>
+  <div class="yui-g">
+    <div class="yui-u first">
+      <% fields_for "project[project_detail_attributes]" , @project.project_detail do |detail_form| -%> 
+      <p>  
+        Description: <%= detail_form.text_field :description %> 
+      </p>
+      <% end -%> 
+    </div>
+    <div class="yui-u">
+      This has no javascript
+    </div>
+  </div>
 </fieldset>
 
 <p>
