@@ -2,7 +2,7 @@
 employee_00001: 
   created_at: 2008-04-16 05:13:07 -04:00
   id: 1
-  name: Niel Armstrong
+  name: Neil Armstrong
   updated_at: 2008-04-16 05:13:07 -04:00
 employee_00002: 
   created_at: 2008-04-16 05:13:29 -04:00

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080508121819) do
+ActiveRecord::Schema.define(:version => 20080508144013) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "employee_id"
@@ -28,6 +28,20 @@ ActiveRecord::Schema.define(:version => 20080508121819) do
   create_table "categorizations", :force => true do |t|
     t.integer  "project_id"
     t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "codes", :force => true do |t|
+    t.string   "name"
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "codes_projects", :force => true do |t|
+    t.integer  "code_id"
+    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
