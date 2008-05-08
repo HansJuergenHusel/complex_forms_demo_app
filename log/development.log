@@ -6090,3 +6090,30 @@ RuntimeError ({"6"=>{"name"=>"Come Back Safely", "marked_for_deletion"=>"false",
     /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
 
 Rendering /Users/jeff/Sites/lab/complex_forms_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000276)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProject Load (0.000409)[0m   [0;1mSELECT * FROM `projects` LIMIT 1[0m
+  [4;35;1mProject Columns (0.002188)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mTag Columns (0.002344)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.000292)[0m   [0;1mINSERT INTO `tags` (`name`, `updated_at`, `created_at`) VALUES('jeff', '2008-05-08 10:54:51', '2008-05-08 10:54:51')[0m
+  [4;35;1mprojects_tags Columns (0.001540)[0m   [0mSHOW FIELDS FROM `projects_tags`[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mINSERT INTO `projects_tags` (`updated_at`, `project_id`, `tag_id`, `id`, `created_at`) VALUES ('2008-05-08 10:54:51', 1, 5, 5, '2008-05-08 10:54:51')[0m
+  [4;35;1mSQL (0.000525)[0m   [0mCOMMIT[0m
+  [4;36;1mJoin Table Columns (0.002833)[0m   [0;1mSHOW FIELDS FROM `projects_tags`[0m
+  [4;35;1mTag Load (0.002144)[0m   [0mSELECT * FROM `tags` INNER JOIN `projects_tags` ON `tags`.id = `projects_tags`.tag_id WHERE (`projects_tags`.project_id = 1 ) [0m
+  [4;36;1mEmployee Columns (0.002456)[0m   [0;1mSHOW FIELDS FROM `employees`[0m
+  [4;35;1mSQL (0.000181)[0m   [0mBEGIN[0m
+  [4;36;1mTask Load (0.000302)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.project_id = 1) [0m
+  [4;35;1mTask Columns (0.002347)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mAssignment Load (0.000258)[0m   [0;1mSELECT * FROM `assignments` WHERE (`assignments`.project_id = 1) [0m
+  [4;35;1mAssignment Columns (0.001516)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mProject Update (0.000335)[0m   [0;1mUPDATE `projects` SET `created_at` = '2008-04-16 05:34:01', `updated_at` = '2008-05-08 11:01:16', `name` = 'Apollo 11' WHERE `id` = 1[0m
+  [4;35;1mTask Update (0.000300)[0m   [0mUPDATE `tasks` SET `created_at` = '2008-04-16 05:39:42', `complete` = 1, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1, `name` = 'Take Off' WHERE `id` = 4[0m
+  [4;36;1mTask Update (0.000210)[0m   [0;1mUPDATE `tasks` SET `created_at` = '2008-04-16 05:39:54', `complete` = 1, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1, `name` = 'Land on Moon' WHERE `id` = 5[0m
+  [4;35;1mTask Update (0.000200)[0m   [0mUPDATE `tasks` SET `created_at` = '2008-04-16 05:40:11', `complete` = 0, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1, `name` = 'Come Back Safely' WHERE `id` = 6[0m
+  [4;36;1mAssignment Update (0.000260)[0m   [0;1mUPDATE `assignments` SET `created_at` = '2008-04-16 05:41:07', `title` = 'Commander', `employee_id` = 1, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1 WHERE `id` = 1[0m
+  [4;35;1mAssignment Update (0.000139)[0m   [0mUPDATE `assignments` SET `created_at` = '2008-04-16 05:41:07', `title` = 'Command Module Pilot', `employee_id` = 2, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1 WHERE `id` = 2[0m
+  [4;36;1mAssignment Update (0.000142)[0m   [0;1mUPDATE `assignments` SET `created_at` = '2008-04-16 05:42:08', `title` = 'Lunar Module Pilot', `employee_id` = 3, `updated_at` = '2008-05-08 11:01:16', `project_id` = 1 WHERE `id` = 3[0m
+  [4;35;1mEmployee Create (0.000161)[0m   [0mINSERT INTO `employees` (`name`, `updated_at`, `created_at`) VALUES('Jeff', '2008-05-08 11:01:16', '2008-05-08 11:01:16')[0m
+  [4;36;1mSQL (0.000789)[0m   [0;1mROLLBACK[0m

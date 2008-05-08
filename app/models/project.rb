@@ -33,6 +33,13 @@ class Project < ActiveRecord::Base
       throw e
     end
   end
-
+  
+  def code_string=(codestring)
+    code_hash = {}
+    codestring.split(",").map(&:strip).each_with_index do |name, index|
+      code_hash[index] = {:name => name}
+    end
+    code_attributes = code_hash
+  end
 
 end
