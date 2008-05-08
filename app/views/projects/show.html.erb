@@ -31,9 +31,18 @@
 <%- end -%>
 
 <%- if @project.project_detail -%>
-<h3>Deatil</h3>
+<h3>Deatail</h3>
 <ul>
 <li><%= @project.project_detail.description %></li>
+</ul>
+<%- end -%>
+
+<%- if @project.tags.length > 0 -%>
+<h3>Tags</h3>
+<ul>
+  <%- @project.tags.each do |tag| -%>
+    <li><%= tag.name %></li>
+  <%- end -%>
 </ul>
 <%- end -%>
 

@@ -19,7 +19,6 @@ class Project < ActiveRecord::Base
   validates_associated :tasks, :assignments
 
   class << self
-
     # If it's invalid return false
     # If it's valid and saves, return true
     # If there is an error in the transaction, re-raise the error
@@ -33,8 +32,7 @@ class Project < ActiveRecord::Base
     rescue Exception => e
       throw e
     end
-
   end
-    
-end
 
+
+end

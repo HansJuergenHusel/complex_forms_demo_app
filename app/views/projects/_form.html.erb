@@ -78,6 +78,22 @@
 </fieldset>
 
 <fieldset>
+  <legend>Tags (has_and_belongs_to_many)</legend>
+  <div class="yui-g">
+    <div class="yui-u first">
+      <div id="categories">
+          <%= render :partial => 'tag', :collection => Tag.all, :locals => {:checked => @project.tags} %>
+      </div>
+    </div>
+    <div class="yui-u">
+      <p><%= pluralize(ActiveRecord::Base.connection.send(:select, "select count(*) from projects_tags").first["count(*)"].to_i, "tag") %> in the database</p>
+      <p><%= pluralize(@project.tags.length, "tag") %> on the object</p>
+    </div>
+  </div>
+
+</fieldset>
+
+<fieldset>
   <legend>Project Detail (has_one)</legend>
   <div class="yui-g">
     <div class="yui-u first">

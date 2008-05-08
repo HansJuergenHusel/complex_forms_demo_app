@@ -2,7 +2,7 @@
 <% fields_for prefix, category do |category_form| -%>
 <p>
   <%= category_form.check_box category.id, {:checked => checked.include?(category)}, 1 %>
-  <label for="project_category_attributes_<%=  category.id  %>_id"><%= category.name %></label>
+  <label for="project_category_attributes_<%=  category.id  %>"><%= category.name %></label>
 </p>
 <% end -%>
 

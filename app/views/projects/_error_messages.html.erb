@@ -1,33 +1,31 @@
 <%- associations = error_messages.class.reflect_on_all_associations.map(&:name).map(&:to_s) -%>
 <%- unless error_messages.errors.empty? -%>
-<div id="errorExplanation" class="errorExplanation">
-  <h2>Your form could not be saved</h2>
-  <p>Please correct the following errors and submit again:</p>
-  <ul>
+<%- content_tag :div, :id => "errorExplanation", :class => "errorExplanation" do -%>
+  <%= content_tag :h2, "Your form could not be saved" %>
+  <%= content_tag :p, "Please correct the following errors and submit again:" %>
+  <%- content_tag :ul do -%>
     <%- error_messages.errors.each do |attr,message| -%>
       <%= content_tag :li, "#{attr.humanize} #{message}" unless associations.include?(attr) %>
     <%- end -%>
-
     <%- Project.reflect_on_all_associations.dup.select{|a|a.macro == :has_one}.map(&:name).each do |association| -%>
       <%- error_messages.send(association).errors.each do |attr,message| -%>
         <%= content_tag :li, "#{attr.humanize} #{message}" %>
       <%- end -%>
     <%- end -%>
-
     <%- Project.reflect_on_all_associations.dup.select{|a|a.macro == :has_many}.map(&:name).each do |association| -%>
       <%- error_messages.send(association).each_with_index do |object, index| -%>
         <%- unless object.errors.empty? -%>
-        <li>
-          <%= association.to_s.singularize.humanize %> <%= index + 1 %> has the following errors:
-          <ul>
-            <%- object.errors.each_full do |att_message| -%>
-            <li><%= att_message %></li>
+          <%- content_tag :li do -%>
+            <%= association.to_s.singularize.humanize %> <%= index + 1 %> has the following errors:
+              <%- content_tag :ul do -%>
+                <%- object.errors.each_full do |att_message| -%>
+                <%= content_tag :li, att_message %>
+                <%- end -%>
+              <%- end -%>
             <%- end -%>
-          </ul>
-        </li>
+          <%- end -%>
         <%- end -%>
       <%- end -%>
     <%- end -%>
-  </ul>
-</div>
+  <%- end -%>
 <%- end -%>

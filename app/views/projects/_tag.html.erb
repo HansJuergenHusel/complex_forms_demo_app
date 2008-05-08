@@ -1,0 +1,8 @@
+<% prefix = "project[tag_attributes]" %>
+<% fields_for prefix, tag do |tag_form| -%>
+<p>
+  <%= tag_form.check_box tag.id, {:checked => checked.include?(tag)}, 1 %>
+  <label for="project_tag_attributes_<%=  tag.id  %>"><%= tag.name %></label>
+</p>
+<% end -%>
+
