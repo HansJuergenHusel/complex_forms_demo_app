@@ -4,6 +4,7 @@
 
   git clone git://github.com/zilkey/complex_forms_demo_app.git
   cd complex_forms_demo_app
+  cp config/database.yml.example config/database.yml #=> update database.yml to match your settings
   rake db:create
   rake db:migrate
   rake db:dataset:load_fixtures DATASET=nasa
