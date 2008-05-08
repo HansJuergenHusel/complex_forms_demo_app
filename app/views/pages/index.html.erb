@@ -58,18 +58,16 @@
 
 <pre>
   class Project &lt; ActiveRecord::Base
-    has_many :tasks
-    has_many :assignments
+    has_many :tasks, :single_save =&gt; true
+    has_many :assignments, :single_save =&gt; true
     has_many :employees, :through =&gt; :assignments
     has_many :categorizations
-    has_many :categories, :through =&gt; :categorizations
+    has_many :categories, :through =&gt; :categorizations, :single_save =&gt; true
+    has_one :project_detail, :single_save =&gt; true
+    has_and_belongs_to_many :tags
 
     validates_presence_of :name
     validates_associated :tasks, :assignments
-
-    after_update :save_tasks
-    after_update :save_assignments
-    after_update :save_categorizations
   end
 </pre>
 
@@ -210,16 +208,6 @@
       updated
     rescue Exception =&gt; e
       throw e
-    end
-  end
-    </pre>
-  </li>
-  <li>
-    Make sure the child objects raise errors when they are saved:
-    <pre>
-  def save_assignments
-    assignments.each do |assignment|
-      assignment.save!
     end
   end
     </pre>
