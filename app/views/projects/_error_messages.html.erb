@@ -7,12 +7,12 @@
     <%- error_messages.errors.each do |attr,message| -%>
       <%= content_tag :li, "#{attr.humanize} #{message}" unless associations.include?(attr) %>
     <%- end -%>
-    <%- Project.reflect_on_all_associations.dup.select{|a|a.macro == :has_one}.map(&:name).each do |association| -%>
+    <%- error_messages.class.reflect_on_all_associations.dup.select{|a|a.macro == :has_one}.map(&:name).each do |association| -%>
       <%- error_messages.send(association).errors.each do |attr,message| -%>
         <%= content_tag :li, "#{attr.humanize} #{message}" %>
       <%- end -%>
     <%- end -%>
-    <%- Project.reflect_on_all_associations.dup.select{|a|a.macro == :has_many}.map(&:name).each do |association| -%>
+    <%- error_messages.class.reflect_on_all_associations.dup.select{|a|a.macro == :has_many}.map(&:name).each do |association| -%>
       <%- error_messages.send(association).each_with_index do |object, index| -%>
         <%- unless object.errors.empty? -%>
           <%- content_tag :li do -%>
