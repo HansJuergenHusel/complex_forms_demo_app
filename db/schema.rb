@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080508144013) do
+ActiveRecord::Schema.define(:version => 20080528195301) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "employee_id"
@@ -81,9 +81,10 @@ ActiveRecord::Schema.define(:version => 20080508144013) do
   create_table "tasks", :force => true do |t|
     t.integer  "project_id"
     t.string   "name"
-    t.boolean  "complete",   :default => false, :null => false
+    t.boolean  "complete",      :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sorting_order"
   end
 
 end

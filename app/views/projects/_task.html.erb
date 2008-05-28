@@ -14,11 +14,14 @@
   <label for="<%= "project_#{new_or_existing}_task_attributes_#{id_or_index}_complete" %>">Complete</label>
 
   <%= link_to_function "mark for deletion", "$(this).up('.task').remove()" %> 
+  <%= link_to_function "up",   "move_node(this,'.task','up')  ;write_so('edit_project_1', 'sorting_order');" %>
+  <%= link_to_function "down", "move_node(this,'.task','down');write_so('edit_project_1', 'sorting_order');" %>
 
   <%# 
     this is how we track the records that are marked for deletion
     must be to_s because rails evaluates false and doesn't add the value parameter 
   %>
+  <%= task_form.hidden_field :sorting_order, :index => id_or_index %>
   <%= task_form.hidden_field :marked_for_deletion, :value => task.marked_for_deletion.to_s, :index => id_or_index %>
 
 </p> 

@@ -26,7 +26,7 @@
   <div class="yui-g">
     <div class="yui-u first">
       <div id="tasks">
-        <%= render :partial => 'task', :collection => @project.tasks_without_deleted %>
+		<%= render :partial => 'task', :collection => @project.tasks.sort{|x,y| sort_by_sorting_order(x,y)} %>
       </div>
       <p>
         <%= link_to_function "Add Task", "taskForm.add()" %>
@@ -110,6 +110,6 @@
 </fieldset>
 
 <p>
-<%= f.submit "Submit" %>
+<%= f.submit "Submit", :onClick => "write_so('edit_project_1', 'sorting_order');" %>
 </p>
 <% end -%>

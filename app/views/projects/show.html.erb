@@ -6,7 +6,7 @@
 <%- if @project.tasks.length > 0 -%>
 <h3>Tasks</h3>
 <ul>
-<%- @project.tasks.each do |task| -%>
+<%- @project.tasks.sort{|x,y| sort_by_sorting_order(x,y) }.each do |task| -%>
 <li><%= task.name %></li>
 <%- end -%>
 </ul>
